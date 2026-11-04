@@ -3,7 +3,8 @@
 ## Student Info
 - Name: Nompumelelo Tshabalala
 - Student Number:st10099914
-- Module: MAST5112 Part2
+- Module:MAST5112 Final POE
+
 
 ## Overview
 This project is a React Native app built in Snack. It allows users to add dishes, view the menu, and see statistics.  
@@ -37,11 +38,37 @@ Watch the demo here:https://youtube.com/shorts/8VHrFFzBvYg?si=1grZBlxCNTS-OCEP
 /js/script.js
 
 
-## Changelog
-- Week 1: Created initial App.js structure in Snack
-- Week 2: Added validation and alerts
-- Week 3: Added View Menu screen
-- Week 4: Added Statistics screen
-- Week 5: Uploaded HTML, CSS, and JS files to GitHub
-- Week 6: Added README.md, screenshots, and demo video link
+# Change Log
+
+## Features Added Since Part 2
+
+- Added Edit Menu Item functionality
+- Added Update Menu Item functionality
+- Added Delete Menu Item functionality
+- Added Search Menu Item by name
+- Added Course Filter using Picker
+- Added Clear Filter functionality
+- Improved menu item display layout
+- Added better validation for user input
+- Added additional success and error messages
+
+## Refactoring Changes
+
+- Created reusable clearForm() function
+- Improved code organisation
+- Improved variable and function naming
+- Reduced repeated code
+- Improved screen navigation
+- Improved user feedback and alerts
+- Improved consistency across screens
+- Improved overall user experience
+
+## Statistics Improvements
+
+- Displays total number of menu items
+- Displays average menu price
+- Displays Starter course count
+- Displays Main Course count
+- Displays Dessert count
+
 
