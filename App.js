@@ -6,9 +6,8 @@ import {
   Button,
   FlatList,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
-
-import { Picker } from '@react-native-picker/picker';
 
 export default function App() {
   const [dishName, setDishName] = useState('');
@@ -158,6 +157,23 @@ export default function App() {
     (item) => item.course === 'Dessert'
   ).length;
 
+  const courseButton = (label, value, current, onPress) => (
+    <TouchableOpacity
+      onPress={() => onPress(value)}
+      style={{
+        backgroundColor: current === value ? '#007bff' : '#ddd',
+        padding: 10,
+        borderRadius: 8,
+        marginRight: 8,
+        marginBottom: 8,
+      }}
+    >
+      <Text style={{ color: current === value ? '#fff' : '#000', fontWeight: 'bold' }}>
+        {label}
+      </Text>
+    </TouchableOpacity>
+  );
+
   return (
     <ScrollView
       style={{
@@ -204,29 +220,12 @@ export default function App() {
             }}
           />
 
-          <Picker
-            selectedValue={course}
-            onValueChange={(value) =>
-              setCourse(value)
-            }
-          >
-            <Picker.Item
-              label="Select Course"
-              value=""
-            />
-            <Picker.Item
-              label="Starter"
-              value="Starter"
-            />
-            <Picker.Item
-              label="Main Course"
-              value="Main Course"
-            />
-            <Picker.Item
-              label="Dessert"
-              value="Dessert"
-            />
-          </Picker>
+          <Text style={{ fontWeight: 'bold', marginBottom: 8 }}>Select Course:</Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10 }}>
+            {courseButton('Starter', 'Starter', course, setCourse)}
+            {courseButton('Main Course', 'Main Course', course, setCourse)}
+            {courseButton('Dessert', 'Dessert', course, setCourse)}
+          </View>
 
           <TextInput
             placeholder="Price"
@@ -288,29 +287,13 @@ export default function App() {
             }}
           />
 
-          <Picker
-            selectedValue={selectedFilter}
-            onValueChange={(value) =>
-              setSelectedFilter(value)
-            }
-          >
-            <Picker.Item
-              label="All Courses"
-              value="All"
-            />
-            <Picker.Item
-              label="Starter"
-              value="Starter"
-            />
-            <Picker.Item
-              label="Main Course"
-              value="Main Course"
-            />
-            <Picker.Item
-              label="Dessert"
-              value="Dessert"
-            />
-          </Picker>
+          <Text style={{ fontWeight: 'bold', marginBottom: 8 }}>Filter by Course:</Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10 }}>
+            {courseButton('All', 'All', selectedFilter, setSelectedFilter)}
+            {courseButton('Starter', 'Starter', selectedFilter, setSelectedFilter)}
+            {courseButton('Main', 'Main Course', selectedFilter, setSelectedFilter)}
+            {courseButton('Dessert', 'Dessert', selectedFilter, setSelectedFilter)}
+          </View>
 
           <Button
             title="Clear Filters"
@@ -438,4 +421,3 @@ export default function App() {
     </ScrollView>
   );
 }
-
