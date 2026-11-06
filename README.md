@@ -1,18 +1,18 @@
-Chef's Menu Manager
+**Chef's Menu Manager**
 
 Student Info
-*Name:* Nompumelelo Tshabalala
-*Student Number:* ST10099914
-*Module:* MAST5112 - Final POE
+**Name:** Nompumelelo Tshabalala
+**Student Number:** ST10099914
+**Module:** MAST5112 - Final POE
 
 
-Overview
+**Overview**
 Chef's Menu Manager is a React Native app built in Snack. It allows a chef to manage a restaurant menu digitally — add dishes, edit dishes, delete dishes, search, filter, and view live statistics.
 
 The GitHub repo also includes supporting HTML, CSS, and JS files to demonstrate web structure and documentation.
 
-Demo Video
-Watch the demo here: https://youtube.com/shorts/8VHrFFzBvYg?si=1grZBlxCNTS-OCEP
+**Demo Video**
+Watch the demo here: https://youtube.com/shorts/oaBqeOyjwRM?si=3dS5FwVsg-M0ku9j
 
 Goals & Features
 
